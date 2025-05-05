@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase">
+    <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(STATES,{INIT},{MOVING},{TURNING},{STOPPED},{ERROR})" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#\/" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="MOVES=10" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#3" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="MOVES∈ℕ1" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#4" org.eventb.core.theorem="true"/>
+    <org.eventb.core.scCarrierSet name="STATES" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(STATES)"/>
+    <org.eventb.core.scConstant name="ERROR" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.constant#+" org.eventb.core.type="STATES"/>
+    <org.eventb.core.scConstant name="MOVES" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.constant#1" org.eventb.core.type="ℤ"/>
+    <org.eventb.core.scConstant name="MOVING" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.constant#," org.eventb.core.type="STATES"/>
+    <org.eventb.core.scConstant name="INIT" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.constant#(" org.eventb.core.type="STATES"/>
+    <org.eventb.core.scConstant name="TURNING" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.constant#-" org.eventb.core.type="STATES"/>
+    <org.eventb.core.scConstant name="STOPPED" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.constant#." org.eventb.core.type="STATES"/>
+</org.eventb.core.scContextFile>

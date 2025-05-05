@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+    <org.eventb.core.carrierSet name="'" org.eventb.core.identifier="STATES"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="(" org.eventb.core.identifier="INIT"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="," org.eventb.core.identifier="MOVING"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="-" org.eventb.core.identifier="TURNING"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="." org.eventb.core.identifier="STOPPED"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="true" name="+" org.eventb.core.identifier="ERROR"/>
+    <org.eventb.core.axiom name="/" org.eventb.core.label="axm1" org.eventb.core.predicate="partition(STATES, {INIT}, {MOVING}, {TURNING}, {STOPPED}, {ERROR})"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="1" org.eventb.core.identifier="MOVES"/>
+    <org.eventb.core.axiom name="3" org.eventb.core.label="axm2" org.eventb.core.predicate="MOVES = 10"/>
+    <org.eventb.core.axiom name="4" org.eventb.core.label="axm3" org.eventb.core.predicate="MOVES ∈ ℕ1" org.eventb.core.theorem="true"/>
+</org.eventb.core.contextFile>

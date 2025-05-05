@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+    <org.eventb.core.prProof name="axm1/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="STATES">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1"/>
+            <org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p2"/>
+            <org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p3"/>
+            <org.eventb.core.prAnte name="*" org.eventb.core.prGoal="p4"/>
+            <org.eventb.core.prAnte name="+" org.eventb.core.prGoal="p5"/>
+            <org.eventb.core.prAnte name="," org.eventb.core.prGoal="p6"/>
+            <org.eventb.core.prAnte name="-" org.eventb.core.prGoal="p7"/>
+            <org.eventb.core.prAnte name="." org.eventb.core.prGoal="p8"/>
+            <org.eventb.core.prAnte name="/" org.eventb.core.prGoal="p9"/>
+            <org.eventb.core.prAnte name="0" org.eventb.core.prGoal="p10"/>
+            <org.eventb.core.prAnte name="1" org.eventb.core.prGoal="p11"/>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="ERROR" org.eventb.core.type="STATES"/>
+        <org.eventb.core.prIdent name="INIT" org.eventb.core.type="STATES"/>
+        <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="STATES"/>
+        <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="STATES"/>
+        <org.eventb.core.prIdent name="TURNING" org.eventb.core.type="STATES"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬INIT=STOPPED"/>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬MOVING=STOPPED"/>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬TURNING=STOPPED"/>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬MOVING=TURNING"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(STATES,{INIT},{MOVING},{TURNING},{STOPPED},{ERROR})"/>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬INIT=ERROR"/>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬TURNING=ERROR"/>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬INIT=MOVING"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬MOVING=ERROR"/>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="STATES={INIT,MOVING,TURNING,STOPPED,ERROR}"/>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬STOPPED=ERROR"/>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬INIT=TURNING"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm2/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATES,{INIT},{MOVING},{TURNING},{STOPPED},{ERROR}))" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11"/>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬INIT=STOPPED">
+            <org.eventb.core.prIdent name="INIT" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬MOVING=STOPPED">
+            <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬TURNING=STOPPED">
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="TURNING" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬MOVING=TURNING">
+            <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="TURNING" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="partition(STATES,{INIT},{MOVING},{TURNING},{STOPPED},{ERROR})">
+            <org.eventb.core.prIdent name="ERROR" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="INIT" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="TURNING" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬INIT=ERROR">
+            <org.eventb.core.prIdent name="ERROR" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="INIT" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬TURNING=ERROR">
+            <org.eventb.core.prIdent name="ERROR" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="TURNING" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="¬INIT=MOVING">
+            <org.eventb.core.prIdent name="INIT" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬MOVING=ERROR">
+            <org.eventb.core.prIdent name="ERROR" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="STATES={INIT,MOVING,TURNING,STOPPED,ERROR}">
+            <org.eventb.core.prIdent name="ERROR" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="INIT" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="TURNING" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬STOPPED=ERROR">
+            <org.eventb.core.prIdent name="ERROR" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬INIT=TURNING">
+            <org.eventb.core.prIdent name="INIT" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="TURNING" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm3/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(STATES,{INIT},{MOVING},{TURNING},{STOPPED},{ERROR}))" org.eventb.core.prHyps="">
+            <org.eventb.core.prAnte name="'">
+                <org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13"/>
+                <org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13"/>
+                <org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with MOVES=10" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+                    <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p14">
+                        <org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+                        <org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p14" org.eventb.core.prHyps="">
+                            <org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p15">
+                                <org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p15" org.eventb.core.prHyps=""/>
+                            </org.eventb.core.prAnte>
+                        </org.eventb.core.prRule>
+                    </org.eventb.core.prAnte>
+                </org.eventb.core.prRule>
+            </org.eventb.core.prAnte>
+            <org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+        </org.eventb.core.prRule>
+        <org.eventb.core.prIdent name="MOVES" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prPred name="p15" org.eventb.core.predicate="⊤"/>
+        <org.eventb.core.prPred name="p8" org.eventb.core.predicate="¬MOVING=TURNING">
+            <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="TURNING" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬TURNING=ERROR">
+            <org.eventb.core.prIdent name="ERROR" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="TURNING" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p3" org.eventb.core.predicate="STATES={INIT,MOVING,TURNING,STOPPED,ERROR}">
+            <org.eventb.core.prIdent name="ERROR" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="INIT" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="TURNING" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p13" org.eventb.core.predicate="¬STOPPED=ERROR">
+            <org.eventb.core.prIdent name="ERROR" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬INIT=TURNING">
+            <org.eventb.core.prIdent name="INIT" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="TURNING" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p6" org.eventb.core.predicate="¬INIT=STOPPED">
+            <org.eventb.core.prIdent name="INIT" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬MOVING=STOPPED">
+            <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬TURNING=STOPPED">
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="TURNING" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p2" org.eventb.core.predicate="partition(STATES,{INIT},{MOVING},{TURNING},{STOPPED},{ERROR})">
+            <org.eventb.core.prIdent name="ERROR" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="INIT" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+            <org.eventb.core.prIdent name="STOPPED" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="TURNING" org.eventb.core.type="STATES"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p7" org.eventb.core.predicate="¬INIT=ERROR">
+            <org.eventb.core.prIdent name="ERROR" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="INIT" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p1" org.eventb.core.predicate="MOVES=10"/>
+        <org.eventb.core.prPred name="p4" org.eventb.core.predicate="¬INIT=MOVING">
+            <org.eventb.core.prIdent name="INIT" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬MOVING=ERROR">
+            <org.eventb.core.prIdent name="ERROR" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="MOVING" org.eventb.core.type="STATES"/>
+            <org.eventb.core.prIdent name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+        </org.eventb.core.prPred>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="MOVES∈ℕ1"/>
+        <org.eventb.core.prPred name="p14" org.eventb.core.predicate="10∈ℕ1"/>
+        <org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eqL2:1"/>
+        <org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL5:0"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+        <org.eventb.core.prReas name="r3" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+    </org.eventb.core.prProof>
+    <org.eventb.core.prProof name="axm4/THM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0">
+        <org.eventb.core.lang name="L"/>
+        <org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="hyp" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p0"/>
+        <org.eventb.core.prIdent name="MOVES" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.prPred name="p0" org.eventb.core.predicate="MOVES=10"/>
+        <org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.hyp"/>
+    </org.eventb.core.prProof>
+</org.eventb.core.prFile>

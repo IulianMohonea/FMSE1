@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="0">
+        <org.eventb.core.poIdentifier name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+        <org.eventb.core.poIdentifier name="ERROR" org.eventb.core.type="STATES"/>
+        <org.eventb.core.poIdentifier name="MOVES" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="MOVING" org.eventb.core.type="STATES"/>
+        <org.eventb.core.poIdentifier name="INIT" org.eventb.core.type="STATES"/>
+        <org.eventb.core.poIdentifier name="TURNING" org.eventb.core.type="STATES"/>
+        <org.eventb.core.poIdentifier name="STOPPED" org.eventb.core.type="STATES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="axm3/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GuidedVehicle/C1.bpo|org.eventb.core.poFile#C1|org.eventb.core.poPredicateSet#HYP("/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="MOVES∈ℕ1" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#4"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#4"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GuidedVehicle/C1.bpo|org.eventb.core.poFile#C1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/GuidedVehicle/C1.bpo|org.eventb.core.poFile#C1|org.eventb.core.poPredicateSet#HYP("/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="HYP(" org.eventb.core.parentSet="/GuidedVehicle/C1.bpo|org.eventb.core.poFile#C1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="partition(STATES,{INIT},{MOVING},{TURNING},{STOPPED},{ERROR})" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#\/"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="MOVES=10" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#3"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/GuidedVehicle/C1.bpo|org.eventb.core.poFile#C1|org.eventb.core.poPredicateSet#HYP(" org.eventb.core.poStamp="1">
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="MOVES∈ℕ1" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#4"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

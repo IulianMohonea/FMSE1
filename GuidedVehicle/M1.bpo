@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="265">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="248">
+        <org.eventb.core.poIdentifier name="STATES" org.eventb.core.type="ℙ(STATES)"/>
+        <org.eventb.core.poIdentifier name="ERROR" org.eventb.core.type="STATES"/>
+        <org.eventb.core.poIdentifier name="MOVES" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="MOVING" org.eventb.core.type="STATES"/>
+        <org.eventb.core.poIdentifier name="INIT" org.eventb.core.type="STATES"/>
+        <org.eventb.core.poIdentifier name="TURNING" org.eventb.core.type="STATES"/>
+        <org.eventb.core.poIdentifier name="STOPPED" org.eventb.core.type="STATES"/>
+        <org.eventb.core.poPredicate name="TURNINH" org.eventb.core.predicate="partition(STATES,{INIT},{MOVING},{TURNING},{STOPPED},{ERROR})" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#\/"/>
+        <org.eventb.core.poPredicate name="TURNINI" org.eventb.core.predicate="MOVES=10" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#3"/>
+        <org.eventb.core.poPredicate name="TURNINJ" org.eventb.core.predicate="MOVES∈ℕ1" org.eventb.core.source="/GuidedVehicle/C1.buc|org.eventb.core.contextFile#C1|org.eventb.core.axiom#4"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="248">
+        <org.eventb.core.poIdentifier name="moves" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="state" org.eventb.core.type="STATES"/>
+        <org.eventb.core.poIdentifier name="obstacle" org.eventb.core.type="BOOL"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="248">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPobstaclf"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FALSE∈{TRUE,FALSE}" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="251">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPobstaclf"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ∧0≤MOVES" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#3"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#3"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTobstaclf" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="248">
+        <org.eventb.core.poIdentifier name="obstacle'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="moves'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="state'" org.eventb.core.type="STATES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPobstaclf" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTobstaclf" org.eventb.core.poStamp="248"/>
+    <org.eventb.core.poSequent name="startMoving/grd2/THM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Theorem" org.eventb.core.poStamp="265">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTHYPobstaclg'"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="moves≤MOVES" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#.|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#.|org.eventb.core.guard#*"/>
+        <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTHYPobstaclg'"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poSequent name="startMoving/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="265">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPobstaclg"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="moves+1∈ℕ∧moves+1≤MOVES" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#3"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#."/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#3"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#startMoving\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTobstaclg" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="260">
+        <org.eventb.core.poIdentifier name="moves'" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="state'" org.eventb.core.type="STATES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTHYPobstaclg'" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTobstaclg" org.eventb.core.poStamp="260">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="state=INIT" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#.|org.eventb.core.guard#("/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPobstaclg" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTHYPobstaclg'" org.eventb.core.poStamp="265">
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="moves≤MOVES" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#.|org.eventb.core.guard#*"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="obstacle=FALSE" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#.|org.eventb.core.guard#+"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTobstaclh" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="260">
+        <org.eventb.core.poIdentifier name="state'" org.eventb.core.type="STATES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPobstaclh" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTobstaclh" org.eventb.core.poStamp="260">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="state=MOVING" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#\/|org.eventb.core.guard#'"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="obstacle=FALSE" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#\/|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTobstacli" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="260">
+        <org.eventb.core.poIdentifier name="state'" org.eventb.core.type="STATES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPobstacli" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTobstacli" org.eventb.core.poStamp="260">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="state≠ERROR" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#0|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTobstaclj" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="260">
+        <org.eventb.core.poIdentifier name="state'" org.eventb.core.type="STATES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPobstaclj" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTobstaclj" org.eventb.core.poStamp="260">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="obstacle=TRUE" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#1|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="turnAround/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="260">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTALLHYPobstaclk"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="FALSE∈{TRUE,FALSE}" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#4"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poSequent#turnAround\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTobstaclk" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="260">
+        <org.eventb.core.poIdentifier name="obstacle'" org.eventb.core.type="BOOL"/>
+        <org.eventb.core.poIdentifier name="state'" org.eventb.core.type="STATES"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPobstaclk" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#EVTIDENTobstaclk" org.eventb.core.poStamp="260">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="obstacle=TRUE" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.event#4|org.eventb.core.guard#'"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/GuidedVehicle/M1.bpo|org.eventb.core.poFile#M1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="260">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="state∈STATES" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="obstacle∈{TRUE,FALSE}" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#)"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="moves∈ℕ∧moves≤MOVES" org.eventb.core.source="/GuidedVehicle/M1.bum|org.eventb.core.machineFile#M1|org.eventb.core.invariant#3"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

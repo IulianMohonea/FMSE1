@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+    <org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="state ≔ INIT" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="obstacle ≔ FALSE" org.eventb.core.label="act2"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="moves ≔ 0 " org.eventb.core.label="act3"/>
+    </org.eventb.core.event>
+    <org.eventb.core.invariant name="(" org.eventb.core.label="inv1" org.eventb.core.predicate="state ∈ STATES"/>
+    <org.eventb.core.invariant name=")" org.eventb.core.label="inv2" org.eventb.core.predicate="obstacle ∈ {TRUE, FALSE}"/>
+    <org.eventb.core.seesContext name="+" org.eventb.core.target="C1"/>
+    <org.eventb.core.variable name="," org.eventb.core.identifier="state"/>
+    <org.eventb.core.variable name="-" org.eventb.core.identifier="obstacle"/>
+    <org.eventb.core.event name="." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="startMoving">
+        <org.eventb.core.action name="'" org.eventb.core.assignment="state ≔ MOVING" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="state = INIT"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="moves ≔ moves + 1" org.eventb.core.label="act2"/>
+        <org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="moves ≤ MOVES" org.eventb.core.theorem="true"/>
+        <org.eventb.core.guard name="+" org.eventb.core.label="grd3" org.eventb.core.predicate="obstacle = FALSE"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="turnLeft">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="state = MOVING"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="state ≔ TURNING" org.eventb.core.label="act1"/>
+        <org.eventb.core.guard name=")" org.eventb.core.label="grd2" org.eventb.core.predicate="obstacle = FALSE"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="stopMachine">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="state ≠ ERROR"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="state ≔ STOPPED" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="detectObstacle">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="obstacle = TRUE"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="state ≔ ERROR" org.eventb.core.label="act1"/>
+    </org.eventb.core.event>
+    <org.eventb.core.variable name="2" org.eventb.core.identifier="moves"/>
+    <org.eventb.core.invariant name="3" org.eventb.core.label="inv3" org.eventb.core.predicate="moves ∈ ℕ ∧ moves ≤ MOVES"/>
+    <org.eventb.core.event name="4" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="turnAround">
+        <org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="obstacle = TRUE"/>
+        <org.eventb.core.action name="(" org.eventb.core.assignment="obstacle ≔ FALSE" org.eventb.core.label="act1"/>
+        <org.eventb.core.action name=")" org.eventb.core.assignment="state ≔ TURNING" org.eventb.core.label="act2"/>
+    </org.eventb.core.event>
+</org.eventb.core.machineFile>
